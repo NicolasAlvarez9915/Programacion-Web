@@ -1,0 +1,43 @@
+<div class="jumbotron text-center">
+    <h1>Calculo de Pulsaciones.</h1>
+</div>
+
+
+<div class="container">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <div class="row">
+        <div class="col-sm-4">
+              <h3> Debe ingresar sus datos.</h3>
+              <p> Para calcular sus pulsaciones normales, se necesitan algunos datos importantes <br> 
+                los cuales son: 
+                <br>Su identificacion, nombre, edad, genero.  
+            </p>
+        </div>
+        <div class="col-sm-4">
+              <h3>Informacion Extra</h3>
+              <p title="Informacion extra."> Puede encontrar informacion sobre las pulsaciones en el siguiente enlace. 
+                <a href="https://www.mayoclinic.org/es-es/healthy-lifestyle/fitness/expert-answers/heart-rate/faq-20057979">Aqui. </a>
+            </p>
+        </div>
+        <div class="col-sm-4">
+             <h3>Ingrese su informacion. </h3>
+             <div>
+                    <label id="identifiacionLabel">Identificacion:</label>
+                  <input type="text" id="identificacionLabel"[(ngModel)]="persona.identificacion"><br><br>
+                  <label for="nombreLabel">Nombre:</label>
+                  <input type="text" id="nombreLabel" [(ngModel)]="persona.nombre"><br><br>
+                  <label for="edadLabel">Edad:</label>
+                  <input type="text" id="edadLabel" [(ngModel)]="persona.edad"><br><br>
+                  <label for="genero">Genero:</label>
+                  <select id="genero"[(ngModel)]="persona.genero">
+                    <option value="F">F</option>
+                    <option value="M">M</option>
+              </select>
+                <button (click)="add()" >Calcular Pulsaciones.</button><br>
+                <Label>Su Pulsaciones normales son: {{resultado}}</Label>
+            </div>
+        </div>
+      </div>
+</div>
